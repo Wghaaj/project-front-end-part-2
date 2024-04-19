@@ -1,0 +1,93 @@
+@use "variables" as *;
+
+@mixin fonts($cl, $fs, $fw, $lh){
+    font-size: $fs;
+    font-weight: $fw;
+    line-height: $lh;
+    color: $cl;
+}
+
+main {
+    .container {
+        max-width: $big-container-width;
+        margin: 0 auto;
+    }
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(calc(((100% - 60px) *2) / 7), 1fr)); 
+    gap: $common-margin;
+    max-width: $big-container-width;
+    margin: 0 auto;
+    padding: 50px 60px 0;
+
+    @media screen and (max-width:900px) {
+        grid-template-columns: repeat(auto-fill, minmax(calc((100% - 60px) / 2), 1fr)); 
+    }
+
+    @media screen and (max-width: 650px) {
+            grid-template-columns: repeat(auto-fill, minmax(100%, 1fr)); 
+            gap: 30px;
+            padding: 0 15px 0 30px;
+    }
+
+    @media screen and (max-width:400px) {
+        padding: 0 15px;
+    }
+
+    @media screen and (max-width:1440px) {
+        max-width: $small-container-width;
+    }
+
+}
+
+.none {
+    display: none;
+}
+
+.grid-item {
+    border-radius: 12px;
+
+    &:hover  {
+        color: $accent;
+        
+        svg path {
+            stroke: $accent;
+        }
+    }
+    @media screen and (max-width:900px) {
+        max-width: none;
+        margin: 0 auto;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 12px;
+    }
+
+    p {
+        @include fonts($grey-text, 14px, 400, 22px);
+    }
+
+    .flex {
+        justify-content: space-between;
+        margin-top: 15px;
+        max-width: 400px;
+
+        @media screen and (min-width: 1840px) {
+            p, h4 {
+            font-size: calc(14 * 10%);
+            }
+        }
+    }
+
+}
+
+.about {
+    max-width: $small-container-width;
+    @include fonts(inherit, 38px, 700, 46.32px);
+    margin: 0 auto;
+    padding: 60px 30px;
+}
