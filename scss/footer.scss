@@ -20,6 +20,9 @@ footer {
         grid-template-areas: "a b"
         "c b";
         grid-template-columns: 2fr;
+        border-top: 2px solid $grey-seperator;
+        padding-top: $common-padding;
+        margin: 0 auto;
 
         @media screen and (max-width:900px) {
             grid-template-areas: "a"
