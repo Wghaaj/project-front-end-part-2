@@ -21,7 +21,7 @@ footer {
         "c b";
         grid-template-columns: 2fr;
         border-top: 2px solid $grey-seperator;
-        padding-top: $common-padding;
+        padding-top: calc($common-margin /2);
         margin: 0 auto;
 
         @media screen and (max-width:900px) {
