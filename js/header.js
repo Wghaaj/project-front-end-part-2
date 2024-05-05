@@ -18,6 +18,8 @@ burger.addEventListener('click', () => {
 
     li.forEach(item => {
         item.classList.add("menu-li");
+        item.style.color = '#24A3FF'
+        item.style.textDecoration = 'none'
     });
     
     if (clickCounter === 2) {

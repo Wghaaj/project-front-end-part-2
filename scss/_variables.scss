@@ -17,7 +17,3 @@ $red-gradient: linear-gradient(323.35deg, #F0145A 6.7%, #693264 70.36%);
 $supersoft-gradient: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%);
 $red-text-gradient: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
 $common-margin:60px;
-
-@media screen and (max-width:600) {
-    $common-margin:30px;
-}

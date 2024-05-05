@@ -36,6 +36,12 @@ header .wrapper {
     padding: 0 15px;
   }
 }
+@media screen and (max-width: 600px) {
+  header .flex svg {
+    height: 32px;
+    width: auto;
+  }
+}
 
 @media screen and (max-width: 600px) {
   .svg-logo {
@@ -48,7 +54,7 @@ header .wrapper {
   font-size: 36px;
   font-weight: 400;
   line-height: 43.88px;
-  color: #323264;
+  color: white;
   padding-left: 4px;
 }
 @media screen and (max-width: 600px) {
@@ -106,7 +112,7 @@ header .wrapper {
   font-size: 12px;
   font-weight: 700;
   line-height: 14.63px;
-  color: #B3B3BA;
+  color: white;
   padding: 5px 7px;
 }
 .link:hover {
@@ -127,7 +133,7 @@ header .wrapper {
   .details {
     justify-content: space-between;
     padding: 10px 20px;
-    background-color: #F5F5FA;
+    background-color: rgba(245, 245, 250, 0.2);
     margin-left: -15px;
     margin-right: -20px;
   }
@@ -155,13 +161,14 @@ header .wrapper {
 .tel {
   text-decoration: none;
   font-weight: 700;
+  color: white;
 }
 
 #link-active {
-  color: #F0145A;
+  color: #F0145A !important;
   text-decoration: underline;
-  text-decoration-color: #F0145A;
-  text-underline-offset: 5px;
+  text-decoration-color: #F0145A !important;
+  text-underline-offset: 5px !important;
 }
 
 .navigation {
@@ -191,7 +198,7 @@ header .wrapper {
 
 .li {
   font-weight: 700;
-  color: #24A3FF;
+  color: white;
   margin-left: 15px;
 }
 @media screen and (max-width: 920px) {
@@ -233,13 +240,13 @@ ul {
 .burger span {
   width: 80%;
   height: 2px;
-  background-color: #323264;
+  background-color: white;
 }
 .burger::before, .burger::after {
   content: "";
   height: 2px;
   width: 80%;
-  background-color: #323264;
+  background-color: white;
   position: absolute;
   transition: all 0.3s ease 0s;
 }
