@@ -1,7 +1,7 @@
 const burger = document.querySelector('.burger');
 const nav = document.querySelector(".navigation");
 const ul = document.querySelector(".navigation ul");
-const li = document.querySelectorAll("ul li");
+const li = document.querySelectorAll(".li");
 const main = document.querySelector("main")
 const footer = document.querySelector("footer")
 let clickCounter = 0;

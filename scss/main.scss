@@ -1,0 +1,190 @@
+@use "variables" as *;
+
+@mixin fonts($cl, $fs, $fw, $lh){
+    font-size: $fs;
+    font-weight: $fw;
+    line-height: $lh;
+    color: $cl;
+}
+
+main {
+    .container {
+        margin-top: $common-margin;
+
+        @media screen and (max-width:600px) {
+            margin-top: calc($common-margin /2);
+        }
+
+        img {
+            width: 100%;
+            margin: $common-margin 0;
+        }
+    }
+
+    .wrapper {
+        max-width: $small-container-width;
+        margin: 0 auto;
+        padding: 0 $common-margin;
+
+        @media screen and (max-width:600px) {
+            padding: calc($common-margin /2);
+        }
+    }
+
+    .flex {
+        @media screen and (max-width:920px) {
+            flex-direction: column; 
+        }
+    }
+
+    .active {
+        background-color: transparent;
+
+        &:hover {
+            background-color: transparent;
+        }
+    }
+}
+
+.text {
+    max-width: 60%;
+
+    @media screen and (max-width:920px) {
+        max-width: 100%;
+    }
+
+    &__inner {
+        @include fonts(transparent, 38px, 700, 46.32px);
+        padding-bottom: 28px;
+    }
+
+    .tell {
+        @include fonts(inherit, 19px, 400, 30px)
+    }
+}
+
+.font-16 {
+    @include fonts(inherit, 16px, 400, 19.5px)
+}
+
+.experience {
+    width: 40%;
+    border-left: 4px solid $grey-seperator;
+    padding-left: calc($common-margin /2);
+    margin-left: calc($common-margin /2);
+    height: fit-content;
+
+    @media screen and (max-width:920px) {
+        width: 100%;
+        margin-top: calc($common-margin /2);
+        margin-left: 0;
+    }
+
+    &__inner {
+        margin-bottom: 40px;
+        .d-flex {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+
+            p {
+                @include fonts(transparent, 36px, 700, 43.88px);
+                padding-left: 8px;
+            }
+        }
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.right-text {
+    @include fonts(transparent, 38px, 700, 46.32px);
+    margin-left: $common-margin;
+
+    @media screen and (max-width:900px) {
+        margin-left: 0;
+        margin-top: calc($common-margin /2);
+    }
+}
+
+.slider {
+    background-color: $grey-bg;
+    width: 100%;
+}
+
+.inner-svg {
+    padding: 40px;
+    border-radius: 12px ;
+    background-color: white;
+}
+
+.carousel-container {
+    background-color: $grey-bg;
+    margin-top: $common-margin;
+}
+
+.carousel-wrapper {
+    max-width: $small-container-width;
+    margin: auto;
+    padding: 30px 0;
+    padding-bottom: 0;
+
+    @media screen and (max-width:1440px) {
+        padding: 30px 60px;
+    }
+    p {
+        text-align: center;
+        @include fonts(inherit, 14px, 700, 17.07px);
+        letter-spacing: 1px;
+        padding-bottom: 30px;
+    }
+}
+
+.owl-item {
+    background-color: white !important;
+    border-radius: 12px;
+    max-width: 25%;
+    margin-right: 40px;
+    padding: 25px 0;
+    text-align: center;
+
+    @media screen and (max-width:1440px) {
+        max-width: 15%;
+    }
+
+    @media screen and (max-width:1025px) {
+        max-width: 10%;
+        padding: 15px 0;
+
+        svg {
+            width: 80%;
+        }
+    }
+
+    @media screen and (min-width:1500px) {
+        max-width:30%;
+    }
+
+    &:last-of-type {
+        margin-right: 0;
+    }
+}
+.owl-theme .owl-dots .owl-dot span {
+    width: 16px;
+    height: 16px;
+    margin: 5px 7px;
+    background: $active-regular;
+    opacity: 20%;
+    display: block;
+    backface-visibility: visible;
+    transition: opacity 200ms ease;
+    border-radius: 30px;
+}
+
+.owl-theme .owl-dots .owl-dot.active span, 
+.owl-theme .owl-dots .owl-dot:hover span {
+    background: $active-regular;
+    opacity: 100%;
+}

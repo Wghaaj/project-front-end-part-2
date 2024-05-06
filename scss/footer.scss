@@ -39,6 +39,10 @@ footer {
 
     .tel {
         color: $main-alt;
+        
+        &:hover {
+            color: $accent;
+        }
     }
 
     @media screen and (max-width:765px) {
@@ -88,6 +92,10 @@ footer {
 .map {
     text-decoration: none;
     @include fonts($active-regular, 12px, 700, 14.63px);
+
+    &:hover {
+        color: $accent;
+    }
 }
 
 .bottom .map {
