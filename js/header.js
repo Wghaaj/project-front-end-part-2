@@ -1,7 +1,7 @@
 const burger = document.querySelector('.burger');
 const nav = document.querySelector(".navigation");
 const ul = document.querySelector(".navigation ul");
-const li = document.querySelectorAll("ul li");
+const li = document.querySelectorAll(".li");
 const main = document.querySelector("main")
 const footer = document.querySelector("footer")
 let clickCounter = 0;
@@ -18,6 +18,8 @@ burger.addEventListener('click', () => {
 
     li.forEach(item => {
         item.classList.add("menu-li");
+        item.style.color = '#24A3FF'
+        item.style.textDecoration = 'none'
     });
     
     if (clickCounter === 2) {

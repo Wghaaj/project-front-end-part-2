@@ -27,6 +27,9 @@ footer .seperator {
 footer .tel {
   color: #46466E;
 }
+footer .tel:hover {
+  color: #F0145A;
+}
 @media screen and (max-width: 765px) {
   footer .seperator {
     display: none;
@@ -72,6 +75,9 @@ footer .tel {
   font-weight: 700;
   line-height: 14.63px;
   color: #24A3FF;
+}
+.map:hover {
+  color: #F0145A;
 }
 
 .bottom .map {

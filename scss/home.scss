@@ -1,0 +1,27 @@
+@use "variables" as *;
+
+@mixin fonts($cl, $fs, $fw, $lh){
+    font-size: $fs;
+    font-weight: $fw;
+    line-height: $lh;
+    color: $cl;
+}
+
+main {
+    .container {
+        max-width: $big-container-width;
+        margin: 0 auto;
+    }
+}
+
+.section {
+    background: $supersoft-gradient;
+}
+
+.promo {
+    min-height: 100vh;
+    background-image: url(../images/Symbol.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}

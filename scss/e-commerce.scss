@@ -1,0 +1,255 @@
+@use "variables" as *;
+
+@mixin fonts($cl, $fs, $fw, $lh){
+    font-size: $fs;
+    font-weight: $fw;
+    line-height: $lh;
+    color: $cl;
+}
+
+main {
+    .container {
+        max-width: $big-container-width;
+        margin: 0 auto;
+    }
+}
+
+.section {
+    background: $supersoft-gradient;
+    position: relative;
+    border-radius: 0 0 12px 12px;
+    overflow: hidden;
+
+    &__inner {
+        max-width: $small-container-width;
+        padding: 0 $common-margin;
+        margin: 0 auto;
+        color: white;
+        margin-top: $common-margin;
+
+
+        @media screen and (max-width:1440px) {
+            max-width: 1080px;
+        }
+
+        @media screen and (max-width:600px) {
+            padding: 0 calc($common-margin /2);
+        }
+
+        .flex {
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            text-align: center;
+        }
+
+        .it {
+            @include fonts(transparent, 38px, 700, 46.32px);
+            padding-top: 28px;
+        }
+
+        .info {
+            @include fonts(white, 19px, 400, 30px);
+            padding: 28px 0;
+        }
+
+        .btn {
+            color: white;
+            text-align: center;
+            border: none;
+            background-color: $active-regular;
+            padding: 18px 30px;
+            font-weight: 700;
+            border-radius: 12px;
+            box-shadow: 0px 0px 20px 0px rgba(36, 163, 255, 0.5);
+        }
+
+        .wrapper {
+            border-top: 4px solid rgba(255, 255, 255, 0.5);
+        }
+
+        .services {
+            @include fonts(white, 22px, 700, 26.82px);
+            padding-top: 34px;
+            padding-bottom: calc($common-margin /2);
+        }
+
+
+        .li-info {
+            columns: 2;
+            gap: $common-margin;
+            margin-bottom: $common-margin;
+
+            @media screen and (max-width:600px) {
+                columns: 1;
+            }
+            
+            li {
+            margin-bottom: 15px;
+            list-style-type: disc;
+
+            &::marker {
+                color: $accent;
+            }
+        }
+        }
+
+        
+    }
+}
+
+.modal {
+    background-color: $main-blue;
+    width: 100vw;
+    height: 100vh;
+    z-index: 50;
+    position: fixed;
+    top:0;
+    left: 0;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility .4s, opacity .4s;
+}
+
+.modal__wrapper {
+    transform: scale(0);
+    z-index: 1;
+    transition: transform .5s;
+
+}
+
+.modal.open {
+    visibility: visible;
+    opacity: 1;
+}
+
+.modal.open .modal__wrapper {
+    transform: scale(1);
+    z-index: 1;
+}
+
+
+form {
+    background-color: $grey-bg;
+    padding: calc($common-margin /2);
+    border-radius: 12px;
+    box-sizing: border-box;
+    
+    @media screen and (max-width:600px) {
+        height: 100vh;
+        width: 100vw;
+        display: grid;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .form-flex {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        text-align: left;
+    }
+
+    .close-modal {
+        border: none;
+        background-color: transparent;
+        margin-left: 10px;
+
+        &:hover {
+            background-color: $grey-seperator;
+            z-index: 888;
+            border-radius: 8px;
+        }
+    }
+
+    .red-border {
+        border: 1px solid rgba(255, 0, 0, 1)!important;
+        color: rgba(255, 0, 0, 1)!important;
+    }
+    
+    .blue-border {
+        border: 1px solid rgba(36, 163, 255, 1)!important;
+    }
+
+    .h2 {
+        @include fonts(transparent, 30px, 700, 36.57px);
+        margin-bottom: 15px;
+    }
+
+    .input {
+        border: 1px;
+        border-radius: 8px;
+        padding: 15px;
+        width: 100%;
+        margin-top: 15px;
+        height: 56px;
+    }
+
+    .message {
+        height: 130px;
+        vertical-align: text-top;
+    }
+
+    #message {
+        height: 130px;
+    }
+
+    ::-webkit-input-placeholder {
+        font-family: "Montserrat";
+        @include fonts($grey-text, 16px, 400, 26px);
+    }
+
+    .answer {
+        margin-top: calc($common-margin /2);
+        @include fonts($grey-text, 14px, 700, 17.07px)
+    }
+
+    .active-button {
+        background-color: $active;
+    }
+
+    .form-btn {
+        padding: 18px 30px;
+        border: none;
+        background-color: $active-regular;
+        border-radius: 12px;
+        margin: auto;
+        width: 100%;
+        box-shadow: 0 0 20px 0 rgba(36, 163, 255, 0.5);
+        @include fonts(white, 16px, 700, 19.5px);
+        margin-top: calc($common-margin /2);
+        text-align: center;
+
+        &:hover {
+            background-color: $active-hover;
+        }
+    }
+}
+
+.none {
+    display: none;
+}
+
+.shadow {
+    display: block; 
+    width: calc(100% - 40px);
+    height: 10px;
+    background-color: rgba(202, 202, 219, 1);
+    border-radius: 0 0 12px 12px;
+    margin: 0 auto;
+
+    &::after {
+        content: '';
+        width: calc(100% - 80px);
+        height: 10px;
+        background-color: rgba(231, 231, 242, 1);
+        border-radius: 0 0 12px 12px;
+        display: block;
+        margin: 0 auto;
+        margin-top: 10px;
+    }
+}
+
