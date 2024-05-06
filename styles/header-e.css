@@ -124,6 +124,12 @@ header .wrapper {
 .details {
   align-items: center;
   grid-area: b;
+  justify-content: end;
+}
+@media screen and (max-width: 980px) {
+  .details {
+    justify-content: flex-start;
+  }
 }
 @media screen and (max-width: 650px) {
   .details {

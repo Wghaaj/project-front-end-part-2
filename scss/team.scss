@@ -69,6 +69,7 @@ main {
 
     p {
         @include fonts($grey-text, 14px, 400, 22px);
+        padding-top: 5px;
     }
 
     .flex {

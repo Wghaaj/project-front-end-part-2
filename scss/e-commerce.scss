@@ -43,11 +43,6 @@ main {
             text-align: center;
         }
 
-        .it {
-            @include fonts(transparent, 38px, 700, 46.32px);
-            padding-top: 28px;
-        }
-
         .info {
             @include fonts(white, 19px, 400, 30px);
             padding: 28px 0;
@@ -96,6 +91,11 @@ main {
 
         
     }
+}
+
+.it {
+    @include fonts(transparent, 38px, 700, 46.32px);
+    padding-top: 28px;
 }
 
 .modal {
@@ -253,3 +253,110 @@ form {
     }
 }
 
+.rec-container {
+    background-color: $grey-bg;
+    padding: calc($common-margin /2) $common-margin 0 $common-margin;
+    margin-top: $common-margin;
+    border-radius: 12px 12px 0 0;
+    margin: 0 auto;
+
+    @media screen and (max-width:550px) {
+        padding: calc($common-margin /2) calc($common-margin /2) 0 calc($common-margin /2);
+    }
+    
+}
+
+.rec-wrapper {
+    max-width: $big-container-width;
+    margin: 0 auto
+}
+
+.publ {
+    @include fonts($active-regular, 14px, 700, 17.07px);
+    letter-spacing: 1px;
+    text-decoration: none;
+    padding-left: 2px;
+
+    &::after {
+        content: ">";
+        @include fonts($active-regular, 14px, 700, 17.07px);
+    }
+}
+
+.rec {
+    .it {
+        padding-top: 10px;
+    }
+}
+
+.publications {
+    display: grid;
+    grid-template-areas: "a b c";
+    column-gap: calc($common-margin /2);
+    margin-top: calc($common-margin /2);
+
+    @media screen and (max-width:980px) {
+        grid-template-areas: "a b"
+        "c c";
+    }
+
+    @media screen and (max-width:650px) {
+        grid-template-areas: "a"
+        "b"
+        "c";
+    }
+}
+
+.box {
+    background-color: white;
+    border-radius: 8px;
+
+    @media screen and (max-width:650px) {
+        margin-top: calc($common-margin /2);
+    }
+
+    &:first-of-type {
+        @media screen and (max-width:650px) {
+            margin-top: 0;
+        }
+    }
+
+    &__inner {
+        padding: calc($common-margin /2);
+    }
+
+    img {
+        height: 200px;
+        width: 100%;
+    }
+
+    &:last-of-type {
+        grid-area: c;
+        @media screen and (max-width:980px) {
+            margin-top: calc($common-margin /2); 
+        }
+    }
+}
+
+.head {
+    color: $active-regular;
+    font-weight: 700;
+    padding-bottom: 15px;
+}
+
+.date {
+    @include fonts($grey-text, 12px, 700, 14.63px);
+    letter-spacing: 1px;
+    padding-bottom: 15px;
+}
+
+.grey-line {
+    height: 4px;
+    border: none;
+    background-color: $grey-seperator;
+    margin-bottom: 15px;
+}
+
+.box-span {
+    @include fonts(black, 14px, 400, 22px)
+}
