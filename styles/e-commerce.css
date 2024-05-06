@@ -32,13 +32,6 @@ main .container {
   align-items: center;
   text-align: center;
 }
-.section__inner .it {
-  font-size: 38px;
-  font-weight: 700;
-  line-height: 46.32px;
-  color: transparent;
-  padding-top: 28px;
-}
 .section__inner .info {
   font-size: 19px;
   font-weight: 400;
@@ -83,6 +76,14 @@ main .container {
 }
 .section__inner .li-info li::marker {
   color: #F0145A;
+}
+
+.it {
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 46.32px;
+  color: transparent;
+  padding-top: 28px;
 }
 
 .modal {
@@ -234,4 +235,119 @@ form .form-btn:hover {
   display: block;
   margin: 0 auto;
   margin-top: 10px;
+}
+
+.rec-container {
+  background-color: #F5F5FA;
+  padding: 30px 60px 0 60px;
+  margin-top: 60px;
+  border-radius: 12px 12px 0 0;
+  margin: 0 auto;
+}
+@media screen and (max-width: 550px) {
+  .rec-container {
+    padding: 30px 30px 0 30px;
+  }
+}
+
+.rec-wrapper {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.publ {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 17.07px;
+  color: #24A3FF;
+  letter-spacing: 1px;
+  text-decoration: none;
+  padding-left: 2px;
+}
+.publ::after {
+  content: ">";
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 17.07px;
+  color: #24A3FF;
+}
+
+.rec .it {
+  padding-top: 10px;
+}
+
+.publications {
+  display: grid;
+  grid-template-areas: "a b c";
+  column-gap: 30px;
+  margin-top: 30px;
+}
+@media screen and (max-width: 980px) {
+  .publications {
+    grid-template-areas: "a b" "c c";
+  }
+}
+@media screen and (max-width: 650px) {
+  .publications {
+    grid-template-areas: "a" "b" "c";
+  }
+}
+
+.box {
+  background-color: white;
+  border-radius: 8px;
+}
+@media screen and (max-width: 650px) {
+  .box {
+    margin-top: 30px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .box:first-of-type {
+    margin-top: 0;
+  }
+}
+.box__inner {
+  padding: 30px;
+}
+.box img {
+  height: 200px;
+  width: 100%;
+}
+.box:last-of-type {
+  grid-area: c;
+}
+@media screen and (max-width: 980px) {
+  .box:last-of-type {
+    margin-top: 30px;
+  }
+}
+
+.head {
+  color: #24A3FF;
+  font-weight: 700;
+  padding-bottom: 15px;
+}
+
+.date {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 14.63px;
+  color: #B3B3BA;
+  letter-spacing: 1px;
+  padding-bottom: 15px;
+}
+
+.grey-line {
+  height: 4px;
+  border: none;
+  background-color: #E6E6F0;
+  margin-bottom: 15px;
+}
+
+.box-span {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  color: black;
 }

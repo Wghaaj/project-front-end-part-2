@@ -63,6 +63,7 @@ main .container {
   font-weight: 400;
   line-height: 22px;
   color: #B3B3BA;
+  padding-top: 5px;
 }
 .grid-item .flex {
   justify-content: space-between;
