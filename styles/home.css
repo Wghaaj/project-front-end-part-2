@@ -7,10 +7,12 @@ main .container {
   background: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%);
 }
 
-.promo {
-  min-height: 100vh;
-  background-image: url(../images/Symbol.png);
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
+.header {
+  position: relative;
+  z-index: 11111;
+}
+
+.symbol-image {
+  display: block;
+  margin: 0 auto;
 }
