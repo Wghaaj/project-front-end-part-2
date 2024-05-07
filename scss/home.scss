@@ -23,9 +23,18 @@ main {
     z-index: 11111;
 }
 
-.symbol-image {
-    // width: 100%;
-    // height: auto;
-    display: block;
-    margin: 0 auto; 
+.promo {
+    background-image: url(../images/Symbol.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    min-height: 100vh;
+    padding: auto;
+    background-position: center;
 }
+
+// .symbol-image {
+//     // width: 100%;
+//     // height: auto;
+//     display: block;
+//     margin: 0 auto; 
+// }
