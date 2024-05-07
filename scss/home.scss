@@ -18,10 +18,14 @@ main {
     background: $supersoft-gradient;
 }
 
-.promo {
-    min-height: 100vh;
-    background-image: url(../images/Symbol.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
+.header {
+    position: relative;
+    z-index: 11111;
+}
+
+.symbol-image {
+    // width: 100%;
+    // height: auto;
+    display: block;
+    margin: 0 auto; 
 }
