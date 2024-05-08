@@ -277,6 +277,10 @@ form {
     text-decoration: none;
     padding-left: 2px;
 
+    &:hover {
+        color: $accent;
+    }
+
     &::after {
         content: ">";
         @include fonts($active-regular, 14px, 700, 17.07px);
@@ -310,6 +314,12 @@ form {
 .box {
     background-color: white;
     border-radius: 8px;
+
+    &:hover {
+        .head {
+            color: $accent;
+        }
+    }
 
     @media screen and (max-width:650px) {
         margin-top: calc($common-margin /2);

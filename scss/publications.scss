@@ -1,0 +1,267 @@
+@use "variables" as *;
+
+@mixin fonts($cl, $fs, $fw, $lh){
+    font-size: $fs;
+    font-weight: $fw;
+    line-height: $lh;
+    color: $cl;
+}
+
+main {
+    .container {
+        max-width: $big-container-width;
+        margin: 0 auto;
+        padding: 0 $common-margin;
+        margin-top: $common-margin;
+        margin-bottom: calc($common-margin /2);
+
+        @media screen and (max-width:600px) {
+            padding: 0 calc($common-margin /2);
+        }
+    }
+
+    .wrapper {
+        max-width: $small-container-width;
+        
+    }
+
+    .section {
+        max-width: 100%;
+        margin-top: calc($common-margin /2);
+
+        &:first-of-type {
+            margin-top: 0;
+        }
+    }
+
+    .box {
+        img {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            margin-bottom: calc($common-margin /2);
+        }
+
+        .head {
+            @include fonts($main-blue, 30px, 700,36.57px);
+            padding-bottom: calc($common-margin /2);
+
+            @media screen and (max-width:600px) {
+                font-size: 20px;
+                line-height: 24.38px;
+            }
+        }
+        
+        .date {
+            @include fonts($grey-text, 12px, 700, 14.63px);
+            letter-spacing: 1px;
+            padding-bottom: calc($common-margin /2);
+        }
+        
+        .grey-line {
+            height: 4px;
+            border: none;
+            background-color: $grey-seperator;
+            margin-bottom: calc($common-margin /2);
+        }
+        
+        .box-span {
+            @include fonts(black, 16px, 400, 26px)
+        }
+    }
+
+    h1 {
+        @include fonts(transparent, 38px, 700, 46.32px);
+    }
+
+    h3{
+        @include fonts(inherit, 22px, 700, 26.82px);
+        margin-top: calc($common-margin /2);
+    }
+
+    li {
+        &::marker {
+            color: $accent;
+            font-weight: 700;
+        }
+        margin-left: 40px;
+        margin-top: 15px;
+        @include fonts(inherit, 18px, 400, 26px);
+    }
+
+    .font-16 {
+        color: $main-blue;
+        padding-top: calc($common-margin /2);
+    }
+
+    .pic {
+        max-width: 660px;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        margin-top: calc($common-margin /2);
+        align-items: center
+    }
+
+    .pic-text {
+        @include fonts($grey-text, 14px, 400, 22px);
+        
+    }
+
+    .illustration {
+        width: 100%;
+    }
+
+    .font-16 {
+        line-height: 26px;
+    }
+
+    .icons {
+        display: flex;
+    }
+
+    .icon {
+        background-color: $grey-bg;
+        padding: 9px;
+        padding-bottom: 7px;
+        margin-left: 10px;
+        border-radius: 12px;
+        width: fit-content;
+
+        &:hover {
+            background-color: $grey-alt;
+        }
+    }
+}
+.line {
+    margin: calc($common-margin /2) 0;
+    height: 4px;
+    width: 100%;
+    border: none;
+    background-color: $grey-seperator;
+}
+
+footer {
+    .rec-container {
+        background-color: $grey-bg;
+        padding: calc($common-margin /2) $common-margin 0 $common-margin;
+        margin-top: $common-margin;
+        border-radius: 12px 12px 0 0;
+        margin: 0 auto;
+    
+        @media screen and (max-width:550px) {
+            padding: calc($common-margin /2) calc($common-margin /2) 0 calc($common-margin /2);
+        }
+        
+    }
+    
+    .rec-wrapper {
+        max-width: $big-container-width;
+        margin: 0 auto
+    }
+    
+    .publ {
+        @include fonts($active-regular, 14px, 700, 17.07px);
+        letter-spacing: 1px;
+        text-decoration: none;
+        padding-left: 2px;
+    
+        &::after {
+            content: ">";
+            @include fonts($active-regular, 14px, 700, 17.07px);
+        }
+
+        &:hover {
+            color: $accent;
+        }
+    }
+    
+    .rec {
+        .it {
+            padding-top: 10px;
+        }
+    }
+    
+    .publications {
+        display: grid;
+        grid-template-areas: "a b c";
+        column-gap: calc($common-margin /2);
+        margin-top: calc($common-margin /2);
+    
+        @media screen and (max-width:980px) {
+            grid-template-areas: "a b"
+            "c c";
+        }
+    
+        @media screen and (max-width:650px) {
+            grid-template-areas: "a"
+            "b"
+            "c";
+        }
+    }
+    
+    .box {
+        background-color: white;
+        border-radius: 8px;
+
+        &:hover {
+            .head {
+                color: $accent;
+            }
+        }
+    
+        @media screen and (max-width:650px) {
+            margin-top: calc($common-margin /2);
+        }
+    
+        &:first-of-type {
+            @media screen and (max-width:650px) {
+                margin-top: 0;
+            }
+        }
+    
+        &__inner {
+            padding: calc($common-margin /2);
+        }
+    
+        img {
+            height: 200px;
+            width: 100%;
+        }
+    
+        &:last-of-type {
+            grid-area: c;
+            @media screen and (max-width:980px) {
+                margin-top: calc($common-margin /2); 
+            }
+        }
+    }
+    
+    .head {
+        color: $active-regular;
+        font-weight: 700;
+        padding-bottom: 15px;
+    }
+    
+    .date {
+        @include fonts($grey-text, 12px, 700, 14.63px);
+        letter-spacing: 1px;
+        padding-bottom: 15px;
+    }
+    
+    .grey-line {
+        height: 4px;
+        border: none;
+        background-color: $grey-seperator;
+        margin-bottom: 15px;
+    }
+    
+    .box-span {
+        @include fonts(black, 14px, 400, 22px)
+    }
+    
+    .it {
+        @include fonts(transparent, 38px, 700, 46.32px);
+    }
+}
+

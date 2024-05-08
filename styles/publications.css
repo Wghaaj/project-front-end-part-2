@@ -1,0 +1,250 @@
+main .container {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 60px;
+  margin-top: 60px;
+  margin-bottom: 30px;
+}
+@media screen and (max-width: 600px) {
+  main .container {
+    padding: 0 30px;
+  }
+}
+main .wrapper {
+  max-width: 1360px;
+}
+main .section {
+  max-width: 100%;
+  margin-top: 30px;
+}
+main .section:first-of-type {
+  margin-top: 0;
+}
+main .box img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin-bottom: 30px;
+}
+main .box .head {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 36.57px;
+  color: #323264;
+  padding-bottom: 30px;
+}
+@media screen and (max-width: 600px) {
+  main .box .head {
+    font-size: 20px;
+    line-height: 24.38px;
+  }
+}
+main .box .date {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 14.63px;
+  color: #B3B3BA;
+  letter-spacing: 1px;
+  padding-bottom: 30px;
+}
+main .box .grey-line {
+  height: 4px;
+  border: none;
+  background-color: #E6E6F0;
+  margin-bottom: 30px;
+}
+main .box .box-span {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  color: black;
+}
+main h1 {
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 46.32px;
+  color: transparent;
+}
+main h3 {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 26.82px;
+  color: inherit;
+  margin-top: 30px;
+}
+main li {
+  margin-left: 40px;
+  margin-top: 15px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 26px;
+  color: inherit;
+}
+main li::marker {
+  color: #F0145A;
+  font-weight: 700;
+}
+main .font-16 {
+  color: #323264;
+  padding-top: 30px;
+}
+main .pic {
+  max-width: 660px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+  align-items: center;
+}
+main .pic-text {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  color: #B3B3BA;
+}
+main .illustration {
+  width: 100%;
+}
+main .font-16 {
+  line-height: 26px;
+}
+main .icons {
+  display: flex;
+}
+main .icon {
+  background-color: #F5F5FA;
+  padding: 9px;
+  padding-bottom: 7px;
+  margin-left: 10px;
+  border-radius: 12px;
+  width: fit-content;
+}
+main .icon:hover {
+  background-color: #EDEDF7;
+}
+
+.line {
+  margin: 30px 0;
+  height: 4px;
+  width: 100%;
+  border: none;
+  background-color: #E6E6F0;
+}
+
+footer .rec-container {
+  background-color: #F5F5FA;
+  padding: 30px 60px 0 60px;
+  margin-top: 60px;
+  border-radius: 12px 12px 0 0;
+  margin: 0 auto;
+}
+@media screen and (max-width: 550px) {
+  footer .rec-container {
+    padding: 30px 30px 0 30px;
+  }
+}
+footer .rec-wrapper {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+footer .publ {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 17.07px;
+  color: #24A3FF;
+  letter-spacing: 1px;
+  text-decoration: none;
+  padding-left: 2px;
+}
+footer .publ::after {
+  content: ">";
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 17.07px;
+  color: #24A3FF;
+}
+footer .publ:hover {
+  color: #F0145A;
+}
+footer .rec .it {
+  padding-top: 10px;
+}
+footer .publications {
+  display: grid;
+  grid-template-areas: "a b c";
+  column-gap: 30px;
+  margin-top: 30px;
+}
+@media screen and (max-width: 980px) {
+  footer .publications {
+    grid-template-areas: "a b" "c c";
+  }
+}
+@media screen and (max-width: 650px) {
+  footer .publications {
+    grid-template-areas: "a" "b" "c";
+  }
+}
+footer .box {
+  background-color: white;
+  border-radius: 8px;
+}
+footer .box:hover .head {
+  color: #F0145A;
+}
+@media screen and (max-width: 650px) {
+  footer .box {
+    margin-top: 30px;
+  }
+}
+@media screen and (max-width: 650px) {
+  footer .box:first-of-type {
+    margin-top: 0;
+  }
+}
+footer .box__inner {
+  padding: 30px;
+}
+footer .box img {
+  height: 200px;
+  width: 100%;
+}
+footer .box:last-of-type {
+  grid-area: c;
+}
+@media screen and (max-width: 980px) {
+  footer .box:last-of-type {
+    margin-top: 30px;
+  }
+}
+footer .head {
+  color: #24A3FF;
+  font-weight: 700;
+  padding-bottom: 15px;
+}
+footer .date {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 14.63px;
+  color: #B3B3BA;
+  letter-spacing: 1px;
+  padding-bottom: 15px;
+}
+footer .grey-line {
+  height: 4px;
+  border: none;
+  background-color: #E6E6F0;
+  margin-bottom: 15px;
+}
+footer .box-span {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  color: black;
+}
+footer .it {
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 46.32px;
+  color: transparent;
+}
