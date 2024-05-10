@@ -22,7 +22,7 @@ main {
     margin: 0 auto;
     padding: 50px 60px 0;
 
-    @media screen and (max-width:900px) {
+    @media screen and (max-width:980px) {
         grid-template-columns: repeat(auto-fill, minmax(calc((100% - 60px) / 2), 1fr)); 
     }
 
@@ -56,7 +56,7 @@ main {
             stroke: $accent;
         }
     }
-    @media screen and (max-width:900px) {
+    @media screen and (max-width:980px) {
         max-width: none;
         margin: 0 auto;
     }
@@ -91,4 +91,9 @@ main {
     @include fonts(inherit, 38px, 700, 46.32px);
     margin: 0 auto;
     padding: 60px 30px;
+
+    @media screen and (max-width:650px) {
+        font-size: 30px;
+        line-height: 36.57px;
+    }
 }

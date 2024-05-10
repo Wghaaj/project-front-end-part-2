@@ -96,6 +96,11 @@ main {
 .it {
     @include fonts(transparent, 38px, 700, 46.32px);
     padding-top: 28px;
+
+    @media screen and (max-width:650px) {
+        font-size: 30px;
+        line-height: 36.57px;
+    }
 }
 
 .modal {
@@ -338,6 +343,7 @@ form {
     img {
         height: 200px;
         width: 100%;
+        object-fit: cover;
     }
 
     &:last-of-type {

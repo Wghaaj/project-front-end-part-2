@@ -47,6 +47,12 @@ main .active:hover {
   color: transparent;
   padding-bottom: 28px;
 }
+@media screen and (max-width: 650px) {
+  .text__inner {
+    font-size: 30px;
+    line-height: 36.57px;
+  }
+}
 .text .tell {
   font-size: 19px;
   font-weight: 400;
@@ -107,6 +113,12 @@ main .active:hover {
     margin-top: 30px;
   }
 }
+@media screen and (max-width: 650px) {
+  .right-text {
+    font-size: 30px;
+    line-height: 36.57px;
+  }
+}
 
 .slider {
   background-color: #F5F5FA;
@@ -121,7 +133,12 @@ main .active:hover {
 
 .carousel-container {
   background-color: #F5F5FA;
-  margin-top: 60px;
+  margin-bottom: 30px;
+}
+@media screen and (max-width: 650px) {
+  .carousel-container {
+    margin-bottom: 15px;
+  }
 }
 
 .carousel-wrapper {
@@ -132,7 +149,8 @@ main .active:hover {
 }
 @media screen and (max-width: 1440px) {
   .carousel-wrapper {
-    padding: 30px 60px;
+    padding: 0 60px;
+    padding-top: 30px;
   }
 }
 .carousel-wrapper p {
@@ -192,4 +210,8 @@ main .active:hover {
 .owl-theme .owl-dots .owl-dot:hover span {
   background: #24A3FF;
   opacity: 100%;
+}
+
+footer .container {
+  padding-top: 0;
 }

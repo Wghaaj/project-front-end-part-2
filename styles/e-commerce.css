@@ -85,6 +85,12 @@ main .container {
   color: transparent;
   padding-top: 28px;
 }
+@media screen and (max-width: 650px) {
+  .it {
+    font-size: 30px;
+    line-height: 36.57px;
+  }
+}
 
 .modal {
   background-color: #323264;
@@ -319,6 +325,7 @@ form .form-btn:hover {
 .box img {
   height: 200px;
   width: 100%;
+  object-fit: cover;
 }
 .box:last-of-type {
   grid-area: c;

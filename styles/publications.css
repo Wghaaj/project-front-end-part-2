@@ -5,7 +5,7 @@ main .container {
   margin-top: 60px;
   margin-bottom: 30px;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 650px) {
   main .container {
     padding: 0 30px;
   }
@@ -33,7 +33,7 @@ main .box .head {
   color: #323264;
   padding-bottom: 30px;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 650px) {
   main .box .head {
     font-size: 20px;
     line-height: 24.38px;
@@ -65,12 +65,24 @@ main h1 {
   line-height: 46.32px;
   color: transparent;
 }
+@media screen and (max-width: 650px) {
+  main h1 {
+    font-size: 30px;
+    line-height: 36.57px;
+  }
+}
 main h3 {
   font-size: 22px;
   font-weight: 700;
   line-height: 26.82px;
   color: inherit;
   margin-top: 30px;
+}
+@media screen and (max-width: 650px) {
+  main h3 {
+    font-size: 16px;
+    line-height: 19.5px;
+  }
 }
 main li {
   margin-left: 40px;
@@ -208,6 +220,7 @@ footer .box__inner {
 footer .box img {
   height: 200px;
   width: 100%;
+  object-fit: cover;
 }
 footer .box:last-of-type {
   grid-area: c;

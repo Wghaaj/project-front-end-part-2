@@ -15,14 +15,13 @@ main {
         margin-top: $common-margin;
         margin-bottom: calc($common-margin /2);
 
-        @media screen and (max-width:600px) {
+        @media screen and (max-width:650px) {
             padding: 0 calc($common-margin /2);
         }
     }
 
     .wrapper {
         max-width: $small-container-width;
-        
     }
 
     .section {
@@ -46,7 +45,7 @@ main {
             @include fonts($main-blue, 30px, 700,36.57px);
             padding-bottom: calc($common-margin /2);
 
-            @media screen and (max-width:600px) {
+            @media screen and (max-width:650px) {
                 font-size: 20px;
                 line-height: 24.38px;
             }
@@ -72,11 +71,21 @@ main {
 
     h1 {
         @include fonts(transparent, 38px, 700, 46.32px);
+
+        @media screen and (max-width:650px) {
+            font-size: 30px;
+            line-height: 36.57px;
+        }
     }
 
     h3{
         @include fonts(inherit, 22px, 700, 26.82px);
         margin-top: calc($common-margin /2);
+
+        @media screen and (max-width:650px) {
+            font-size: 16px;
+            line-height: 19.5px;
+        }
     }
 
     li {
@@ -227,6 +236,7 @@ footer {
         img {
             height: 200px;
             width: 100%;
+            object-fit: cover;
         }
     
         &:last-of-type {

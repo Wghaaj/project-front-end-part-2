@@ -56,6 +56,11 @@ main {
     &__inner {
         @include fonts(transparent, 38px, 700, 46.32px);
         padding-bottom: 28px;
+
+        @media screen and (max-width:650px) {
+            font-size: 30px;
+            line-height: 36.57px;
+        }
     }
 
     .tell {
@@ -107,6 +112,11 @@ main {
         margin-left: 0;
         margin-top: calc($common-margin /2);
     }
+
+    @media screen and (max-width:650px) {
+        font-size: 30px;
+        line-height: 36.57px;
+    }
 }
 
 .slider {
@@ -122,7 +132,11 @@ main {
 
 .carousel-container {
     background-color: $grey-bg;
-    margin-top: $common-margin;
+    margin-bottom: calc($common-margin /2);
+
+    @media screen and (max-width:650px) {
+        margin-bottom: 15px;
+    }
 }
 
 .carousel-wrapper {
@@ -132,7 +146,8 @@ main {
     padding-bottom: 0;
 
     @media screen and (max-width:1440px) {
-        padding: 30px 60px;
+        padding: 0 60px;
+        padding-top: 30px;
     }
     p {
         text-align: center;
@@ -187,4 +202,10 @@ main {
 .owl-theme .owl-dots .owl-dot:hover span {
     background: $active-regular;
     opacity: 100%;
+}
+
+footer {
+    .container {
+        padding-top: 0;
+    }
 }

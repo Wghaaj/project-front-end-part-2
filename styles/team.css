@@ -11,7 +11,7 @@ main .container {
   margin: 0 auto;
   padding: 50px 60px 0;
 }
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 980px) {
   .grid-container {
     grid-template-columns: repeat(auto-fill, minmax(calc((100% - 60px) / 2), 1fr));
   }
@@ -47,7 +47,7 @@ main .container {
 .grid-item:hover svg path {
   stroke: #F0145A;
 }
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 980px) {
   .grid-item {
     max-width: none;
     margin: 0 auto;
@@ -84,4 +84,10 @@ main .container {
   color: inherit;
   margin: 0 auto;
   padding: 60px 30px;
+}
+@media screen and (max-width: 650px) {
+  .about {
+    font-size: 30px;
+    line-height: 36.57px;
+  }
 }

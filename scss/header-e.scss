@@ -1,9 +1,9 @@
 @use "variables" as *;
 
 .text-gradient {
-    background-image: $red-text-gradient;
-    -webkit-background-clip: text;
-    color: transparent;
+    background-image: $red-text-gradient !important;
+    -webkit-background-clip: text !important;
+    color: transparent !important;
 
     &__innner {
         font-size: 2.375em;
