@@ -177,11 +177,16 @@ footer {
     
         &::after {
             content: ">";
-            @include fonts($active-regular, 14px, 700, 17.07px);
+            @include fonts(inherit, 14px, 700, 17.07px);
         }
 
         &:hover {
             color: $accent;
+
+            &::after {
+                color: $accent;
+            }
+
         }
     }
     

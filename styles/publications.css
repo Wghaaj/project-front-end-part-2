@@ -173,9 +173,12 @@ footer .publ::after {
   font-size: 14px;
   font-weight: 700;
   line-height: 17.07px;
-  color: #24A3FF;
+  color: inherit;
 }
 footer .publ:hover {
+  color: #F0145A;
+}
+footer .publ:hover::after {
   color: #F0145A;
 }
 footer .rec .it {
