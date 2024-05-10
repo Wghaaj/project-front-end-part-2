@@ -470,6 +470,8 @@ main {
 
 .grid-container {
     padding:  $common-margin;
+    max-width: $big-container-width;
+    margin: 0 auto;
 
     @media screen and (max-width:650px) {
         padding: calc($common-margin /2);

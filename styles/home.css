@@ -462,6 +462,8 @@ main .d-flex img {
 
 .grid-container {
   padding: 60px;
+  max-width: 1600px;
+  margin: 0 auto;
 }
 @media screen and (max-width: 650px) {
   .grid-container {
