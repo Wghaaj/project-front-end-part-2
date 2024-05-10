@@ -49,9 +49,12 @@ main {
         overflow: hidden !important;
 
         .wrapper {
-            padding: 0 $common-margin;
             max-width: $big-container-width;
             margin: 0 auto;
+
+            @media screen and (max-width:1700px) {
+                padding: 0 $common-margin;
+            }
 
             @media screen and (max-width:650px) {
                 padding: 0 calc($common-margin /2);
@@ -173,9 +176,27 @@ main {
 
 .grid {
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: auto auto auto auto;
     width: 100%;
+    margin: 0 auto;
     margin-top: $common-margin;
+    border-radius: 12px;
+    max-width: calc($big-container-width + ($common-margin * 2));
+    margin-bottom: $common-margin;
+
+    @media screen and (max-width:1800px) {
+        padding: 0 $common-margin;
+    }
+
+    @media screen and (max-width: 1500px) {
+        max-width: $big-container-width;
+        margin-bottom: 0;
+        padding: 0;
+    }
+
+    @media screen and (max-width:980px) {
+        grid-template-columns: auto auto auto;
+    }
 
     @media screen and (max-width:650px) {
         grid-template-columns: auto;
@@ -185,9 +206,42 @@ main {
 }
 
 .grid-item {
+    &:first-child {
+        border-radius: 12px 0 0 0;
+
+        @media screen and (max-width:1500px) {
+            border-radius: 0;
+        }
+    }
+
+    &:nth-child(4) {
+        border-radius: 0 12px 0 0 ;
+
+        @media screen and (max-width:1500px) {
+            border-radius: 0;
+        }
+    }
+
+    &:nth-child(9) {
+        border-radius: 0 0 0 12px;
+
+        @media screen and (max-width:1500px) {
+            border-radius: 0;
+        }
+    }
+
+    &:last-child {
+        border-radius: 0 0 12px 0;
+
+        @media screen and (max-width:1500px) {
+            border-radius: 0;
+        }
+    }
+
     img {
-        width: 100%;
-        height: 100%;
+        width: 100% !important;
+        height: 100% !important;
+        border-radius: inherit;
     }
 }
 
@@ -368,7 +422,7 @@ main {
         max-width: 375px !important;
 
         @media screen and (max-width:980px) {
-            width: calc(100vw + 18px) !important;
+            width: 100vw!important;
             max-width: initial !important;
             margin-left: -$common-margin !important;
             margin-right: -$common-margin !important;

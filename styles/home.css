@@ -38,9 +38,13 @@ main .container {
   overflow: hidden !important;
 }
 main .container .wrapper {
-  padding: 0 60px;
   max-width: 1600px;
   margin: 0 auto;
+}
+@media screen and (max-width: 1700px) {
+  main .container .wrapper {
+    padding: 0 60px;
+  }
 }
 @media screen and (max-width: 650px) {
   main .container .wrapper {
@@ -166,9 +170,30 @@ main .d-flex img {
 
 .grid {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: auto auto auto auto;
   width: 100%;
+  margin: 0 auto;
   margin-top: 60px;
+  border-radius: 12px;
+  max-width: 1720px;
+  margin-bottom: 60px;
+}
+@media screen and (max-width: 1800px) {
+  .grid {
+    padding: 0 60px;
+  }
+}
+@media screen and (max-width: 1500px) {
+  .grid {
+    max-width: 1600px;
+    margin-bottom: 0;
+    padding: 0;
+  }
+}
+@media screen and (max-width: 980px) {
+  .grid {
+    grid-template-columns: auto auto auto;
+  }
 }
 @media screen and (max-width: 650px) {
   .grid {
@@ -178,9 +203,42 @@ main .d-flex img {
   }
 }
 
+.grid-item:first-child {
+  border-radius: 12px 0 0 0;
+}
+@media screen and (max-width: 1500px) {
+  .grid-item:first-child {
+    border-radius: 0;
+  }
+}
+.grid-item:nth-child(4) {
+  border-radius: 0 12px 0 0;
+}
+@media screen and (max-width: 1500px) {
+  .grid-item:nth-child(4) {
+    border-radius: 0;
+  }
+}
+.grid-item:nth-child(9) {
+  border-radius: 0 0 0 12px;
+}
+@media screen and (max-width: 1500px) {
+  .grid-item:nth-child(9) {
+    border-radius: 0;
+  }
+}
+.grid-item:last-child {
+  border-radius: 0 0 12px 0;
+}
+@media screen and (max-width: 1500px) {
+  .grid-item:last-child {
+    border-radius: 0;
+  }
+}
 .grid-item img {
-  width: 100%;
-  height: 100%;
+  width: 100% !important;
+  height: 100% !important;
+  border-radius: inherit;
 }
 
 .section {
@@ -351,7 +409,7 @@ main .d-flex img {
 }
 @media screen and (max-width: 980px) {
   .tabs-section .nav-wrap {
-    width: calc(100vw + 18px) !important;
+    width: 100vw !important;
     max-width: initial !important;
     margin-left: -60px !important;
     margin-right: -60px !important;
