@@ -433,6 +433,9 @@ main .d-flex img {
   border-radius: 24px;
   padding: 14px;
 }
+.grid-container .grid-box:hover .head {
+  color: #F0145A;
+}
 .grid-container .head {
   color: #24A3FF;
   font-weight: 700;
@@ -440,9 +443,6 @@ main .d-flex img {
   padding-top: 15px;
   font-size: 22px;
   line-height: 26.82px;
-}
-.grid-container .head:hover {
-  color: #F0145A;
 }
 .grid-container .grid-box-span {
   font-size: 16px;
