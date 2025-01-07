@@ -1,0 +1,117 @@
+@use "variables" as *;
+
+@mixin fonts($cl, $fs, $fw, $lh){
+    font-size: $fs;
+    font-weight: $fw;
+    line-height: $lh;
+    color: $cl;
+}
+
+main {
+    padding: 0 60px;
+    .container {
+        max-width: $big-container-width;
+        margin: 0 auto;
+    }
+
+    .grid-container {
+        display: grid;
+        grid-template-areas: "a b"
+        "a c";
+        margin: 0 auto;
+        max-width: $small-container-width;
+        margin-top: $common-margin;
+
+        @media screen and (max-width:980px) {
+            grid-template-areas: "a b"
+            "c c";
+            align-items: center;
+        }
+
+        @media screen and (max-width: 800px) {
+            grid-template-areas: "a a"
+            "b b"
+            "c c";
+        }
+    }
+
+    .font-16 {
+        color: black;
+    }
+
+    .mail {
+        font-weight: 100 !important;
+        font-size: 16px;
+    }
+
+    .grid-item-b {
+        grid-area: b;
+
+        @media screen and (max-width: 800px) {
+            padding-top: calc($common-margin / 2);
+        }
+        
+        .font-14 {
+            font-size: 14px;
+            color: $grey-text;
+            line-height: 26px;
+
+            @media screen and (max-width: 1100px) {
+                padding-bottom: 10px;
+            }
+        }
+
+        .flex {
+            align-items: center;
+            margin-top: 15px;
+
+            @media screen and (max-width:1100px) {
+                flex-direction: column;
+                text-align: left;
+                align-items: baseline;
+            }
+        }
+
+        .non-visible {
+            display: block;
+            @media screen and (max-width: 1100px) {
+                display: none;
+            }
+        }
+    }
+
+    .grid-item-a {
+        grid-area: a;
+        margin-right: $common-margin;
+
+        @media screen and (max-width:980px) {
+            margin-right: calc($common-margin / 2);
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+        }
+    }
+
+    .grid-item-c {
+        border-top: 4px solid $grey-seperator;
+        grid-area: c;
+        margin-top: calc($common-margin / 2);
+        
+        .font-16 {
+            line-height: 26px;
+            padding: calc($common-margin / 2) 0;
+        }
+
+        .national {
+            padding-top: 15px !important;
+        }
+
+        .font-14 {
+            font-weight: 700;
+            color: $main-blue;
+            line-height: 26px;
+        }
+    }
+}

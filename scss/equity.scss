@@ -1,0 +1,9 @@
+@use 'variables' as * ;
+
+main {
+    .section-2 {
+        ul {
+            list-style: disc;
+        }
+    }
+}

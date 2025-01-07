@@ -200,6 +200,9 @@ footer .publications {
     grid-template-areas: "a" "b" "c";
   }
 }
+footer .publications-link {
+  text-decoration: none;
+}
 footer .box {
   background-color: white;
   border-radius: 8px;
@@ -263,4 +266,4 @@ footer .it {
   font-weight: 700;
   line-height: 46.32px;
   color: transparent;
-}
+}/*# sourceMappingURL=gdpr.css.map */

@@ -1,0 +1,85 @@
+main {
+  background-color: #F5F5FA;
+  padding: 60px;
+  margin-top: 60px;
+}
+@media screen and (max-width: 650px) {
+  main {
+    padding: 30px;
+    margin-top: 0;
+  }
+}
+main .container {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+main .publications {
+  display: grid;
+  grid-template-areas: "a b c" "d e f";
+  gap: 30px;
+  margin-top: 30px;
+}
+@media screen and (max-width: 980px) {
+  main .publications {
+    grid-template-areas: "a b" "c c";
+  }
+}
+@media screen and (max-width: 650px) {
+  main .publications {
+    grid-template-areas: "a" "b" "c";
+  }
+}
+main .box {
+  background-color: white;
+  border-radius: 8px;
+}
+main .box img {
+  border-radius: 8px;
+}
+main .box:hover .head {
+  color: #F0145A;
+}
+@media screen and (max-width: 650px) {
+  main .box {
+    margin-top: 30px;
+  }
+}
+@media screen and (max-width: 650px) {
+  main .box:first-of-type {
+    margin-top: 0;
+  }
+}
+main .box__inner {
+  padding: 30px;
+}
+main .box img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+main .head {
+  color: #24A3FF;
+  font-weight: 700;
+  padding-bottom: 15px;
+}
+main .date {
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 14.63px;
+  color: #B3B3BA;
+  letter-spacing: 1px;
+  padding-bottom: 15px;
+}
+main .grey-line {
+  background-color: #F5F5FA;
+  height: 4px;
+  border: none;
+  margin-bottom: 15px;
+}
+
+footer {
+  margin-top: 0;
+}
+footer .wrapper {
+  padding: 30px 0 0;
+}/*# sourceMappingURL=publications.css.map */

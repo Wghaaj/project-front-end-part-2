@@ -32,6 +32,14 @@ ol, ul {
   margin-left: unset !important;
 }
 
+main {
+  margin-bottom: 60px;
+}
+@media screen and (max-width: 980px) {
+  main {
+    margin-bottom: 30px;
+  }
+}
 main .container {
   margin: 0 auto;
   margin-top: 60px;
@@ -650,4 +658,4 @@ main .d-flex img {
 }
 #footer ._active {
   color: #F0145A;
-}
+}/*# sourceMappingURL=home.css.map */

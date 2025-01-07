@@ -43,6 +43,11 @@ ol, ul {
 }
 
 main {
+    margin-bottom: $common-margin;
+
+    @media screen and (max-width: 980px) {
+        margin-bottom: calc($common-margin / 2);
+    }
     .container {
         margin: 0 auto;    
         margin-top: $common-margin;
